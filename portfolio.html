@@ -15,55 +15,57 @@
 </head>
     
 <body>
+
+<!-- HEADER CONTAINER -->
     <header class="page-header">
-        <!-- HEADER CONTAINER -->
         <div class="container">
-            <nav class="header-nav">
-                <a class="logo" href="index.html"><span class="logo-text">Web</span>Studio</a>
+            <nav class="page-header__nav">
+                <a class="logo" href="index.html">
+                    <span class="logo__text">Web</span>
+                    Studio
+                </a>
     
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Студия</a>
+                <ul class="page-header__list">
+                    <li class="page-header__item">
+                        <a class="page-header__link" href="index.html">Студия</a>
                     </li>
     
-                    <li class="nav-item">
-                        <a class="nav-link current" href="portfolio.html">Портфолио</a>
+                    <li class="page-header__item">
+                        <a class="page-header__link page-header__link--active" href="portfolio.html">Портфолио</a>
                     </li>
     
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Контакты</a>
+                    <li class="page-header__item">
+                        <a class="page-header__link" href="#">Контакты</a>
                     </li>
                 </ul>
             </nav>
     
             <ul class="header-contact">
-                <li class="contact-item">
-                    <a class="contact-link" href="mailto:info@devstudio.com">
-                        <svg class="contact-icon" width="16">
+                <li class="header-contact__item">
+                    <a class="header-contact__link" href="mailto:info@devstudio.com">
+                        <svg class="header-contact__icon" width="16" height="12">
                             <use href="./images/sprite.svg#mail"></use>
                         </svg>
                         info@devstudio.com
                     </a>
-    
                 </li>
-    
-                <li class="contact-item">
-                    <a class="contact-link" href="tel:+380961111111">
-                        <svg class="contact-icon" width="10">
+            
+                <li class="header-contact__item">
+                    <a class="header-contact__link" href="tel:+380961111111">
+                        <svg class="header-contact__icon" width="10" height="16">
                             <use href="./images/sprite.svg#phone"></use>
                         </svg>
                         +38 096 111 11 11
                     </a>
-    
                 </li>
             </ul>
         </div>
     </header>
 
     <main>
-        <section class="project">
-            <!-- PROJECTS CONTAINER -->
 
+<!-- PROJECTS CONTAINER -->
+        <section class="project">
             <div class="container">
                 <h2 class="project-title">Проекты</h2>
                 <ul class="project-filter">
@@ -83,12 +85,12 @@
                         <button type="button" class="project-btn">Маркетинг</button>
                     </li>
                 </ul>
-            <!-- PROJECTS LIST -->
 
+<!-- PROJECTS LIST -->
                 <ul class="project-list">
                     <li class="project-item">
 
-                        <!-- THUMB -->
+<!-- THUMB -->
                         <div class="thumb">
                             <img src="./images/img_1.jpg" alt="img">
                                 <div class="overlay">
@@ -227,9 +229,9 @@
         </section>
     </main>
     
+<!-- FOOTER -->
     <footer>
         <section class="footer">
-            <!-- FOOTER -->
             <div class="container footer-box">
                 <div class="address">
                     <h2 class="contact-title">Контакты</h2>
@@ -302,12 +304,12 @@
             </div>
         </section>
     </footer>
-           <!-- HEADER FIXED -->
+
+<!-- HEADER FIXED -->
         <!-- <script>
             const header = document.querySelector(".page-header");
             const { height } = header.getBoundingClientRect();
             document.body.style = `padding-top: ${height}px`;
         </script> -->
 </body>
-    
 </html>
