@@ -931,7 +931,7 @@ textarea {
   color: var(--text-grey);
 }
 
-.thumb {
+.project__thumb {
   position: relative;
   overflow: hidden;
 
@@ -939,7 +939,7 @@ textarea {
   width: 370px; */
 }
 
-.overlay {
+.project__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -960,6 +960,6 @@ textarea {
   transition: transform 250ms ease;
 }
 
-.project__item:hover .overlay {
+.project__item:hover .project__overlay {
   transform: translatey(0);
 }
