@@ -3,13 +3,13 @@
   padding-bottom: 94px;
 }
 
-.project__filter {
+.filter__list {
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
 }
 
-.project__button-list {
+.filter__item {
   height: 38px;
   align-items: center;
   border-radius: 4px;
@@ -20,7 +20,7 @@
   }
 }
 
-.project__button {
+.filter__button {
   padding: 6px 22px;
   cursor: pointer;
   border: transparent;
@@ -34,8 +34,8 @@
   margin-left: -30px;
 }
 
-.project__button-list:hover,
-.project__button:focus {
+.filter__item:hover,
+.filter__button:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }

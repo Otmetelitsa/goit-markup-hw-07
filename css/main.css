@@ -78,7 +78,7 @@ textarea {
           align-items: center;
 }
 
-.page-hero__title {
+.hero__title {
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
@@ -160,7 +160,7 @@ textarea {
   letter-spacing: 0.03em;
 }
 
-.project__button {
+.filter__button {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -199,8 +199,8 @@ textarea {
 .header-contact__link:hover,
 .header-contact__link:focus,
 .modal__contract-link,
-.project__button-list:hover,
-.project__button-list:focus {
+.filter__item:hover,
+.filter__item:focus {
   color: var(--text-blue);
 }
 
@@ -210,17 +210,17 @@ textarea {
   color: var(--text-grey);
 }
 
-.page-hero__title,
+.hero__title,
 .occupation__overlay-text,
 .footer,
 .footer__logo,
 .subscription__input,
-.project__button:hover,
-.project__button:focus {
+.filter__button:hover,
+.filter__button:focus {
   color: var(--text-white);
 }
 
-.page-hero,
+.hero,
 .footer,
 .subscription__input {
   background-color: var(--back-black-light);
@@ -228,8 +228,8 @@ textarea {
 
 .social__link:hover,
 .social__link:focus,
-.project__button:hover,
-.project__button:focus {
+.filter__button:hover,
+.filter__button:focus {
   background-color: var(--text-blue);
 }
 
@@ -238,13 +238,13 @@ textarea {
 .header-contact__link,
 .client__link,
 .social__link,
-.project__button {
+.filter__button {
   -webkit-transition: color 250ms var(--cubic);
   transition: color 250ms var(--cubic);
 }
 
 .social__link,
-.project__button {
+.filter__button {
   -webkit-transition: background-color 250ms var(--cubic);
   transition: background-color 250ms var(--cubic);
 }
@@ -256,12 +256,27 @@ textarea {
   transition: box-shadow 250ms var(--cubic), -webkit-box-shadow 250ms var(--cubic);
 }
 
-.project__button-list:focus,
+.filter__item:focus,
 .social__link:focus,
 .modal__input:focus,
 .modal__comment-input:focus,
-.project__button:focus {
+.filter__button:focus {
   outline: none;
+}
+
+.button {
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  border: transparent;
+  background-color: var(--text-blue);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: var(--text-white);
 }
 
 .page-header .container {
@@ -348,7 +363,7 @@ textarea {
   fill: currentColor;
 }
 
-.page-hero__item {
+.hero__container {
   padding: 200px 0 200px 0;
   max-width: 1600px;
   width: 100%;
@@ -359,35 +374,20 @@ textarea {
   background-repeat: no-repeat;
 }
 
-.page-hero__title {
+.hero__title {
   width: 696px;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
 }
 
-.button {
-  padding: 0;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 4px;
-  border: transparent;
-  background-color: var(--text-blue);
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.06em;
-  color: var(--text-white);
-}
-
-.page-hero__button {
+.hero__button {
   display: block;
+  margin-top: 30px;
   padding: 10px 32px;
 }
 
-.page-hero__button:hover, .page-hero__button:focus {
+.hero__button:hover, .hero__button:focus {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -613,6 +613,7 @@ textarea {
 
 .modal__send-button {
   display: block;
+  margin-top: 30px;
   padding: 10px 56px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -685,7 +686,7 @@ textarea {
   margin-left: 30px;
 }
 
-.occupation__image {
+.occupation__thumb {
   position: relative;
 }
 
@@ -870,6 +871,9 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .footer__logo {
@@ -885,7 +889,6 @@ textarea {
 
 .join {
   margin-left: 70px;
-  margin-top: 12px;
 }
 
 .join__title {
@@ -899,7 +902,6 @@ textarea {
 }
 
 .subscription {
-  margin-top: 12px;
   margin-left: auto;
 }
 
@@ -923,7 +925,8 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   padding: 10px 28px;
-  margin: auto 0 0 12px;
+  margin-left: 12px;
+  margin-top: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -943,7 +946,7 @@ textarea {
   padding-bottom: 94px;
 }
 
-.project__filter {
+.filter__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -953,7 +956,7 @@ textarea {
           justify-content: center;
 }
 
-.project__button-list {
+.filter__item {
   height: 38px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -962,11 +965,11 @@ textarea {
   background: var(--back-grey-btn);
 }
 
-.project__button-list:not(:first-child) {
+.filter__item:not(:first-child) {
   margin-left: 8px;
 }
 
-.project__button {
+.filter__button {
   padding: 6px 22px;
   cursor: pointer;
   border: transparent;
@@ -983,8 +986,8 @@ textarea {
   margin-left: -30px;
 }
 
-.project__button-list:hover,
-.project__button:focus {
+.filter__item:hover,
+.filter__button:focus {
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }

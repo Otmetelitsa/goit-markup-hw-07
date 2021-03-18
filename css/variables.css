@@ -42,7 +42,7 @@
           align-items: center;
 }
 
-.page-hero__title {
+.hero__title {
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
@@ -124,7 +124,7 @@
   letter-spacing: 0.03em;
 }
 
-.project__button {
+.filter__button {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;

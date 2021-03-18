@@ -28,8 +28,8 @@
 .header-contact__link:hover,
 .header-contact__link:focus,
 .modal__contract-link,
-.project__button-list:hover,
-.project__button-list:focus {
+.filter__item:hover,
+.filter__item:focus {
   color: var(--text-blue);
 }
 
@@ -39,17 +39,17 @@
   color: var(--text-grey);
 }
 
-.page-hero__title,
+.hero__title,
 .occupation__overlay-text,
 .footer,
 .footer__logo,
 .subscription__input,
-.project__button:hover,
-.project__button:focus {
+.filter__button:hover,
+.filter__button:focus {
   color: var(--text-white);
 }
 
-.page-hero,
+.hero,
 .footer,
 .subscription__input {
   background-color: var(--back-black-light);
@@ -57,8 +57,8 @@
 
 .social__link:hover,
 .social__link:focus,
-.project__button:hover,
-.project__button:focus {
+.filter__button:hover,
+.filter__button:focus {
   background-color: var(--text-blue);
 }
 
@@ -67,12 +67,12 @@
 .header-contact__link,
 .client__link,
 .social__link,
-.project__button {
+.filter__button {
   transition: color 250ms var(--cubic);
 }
 
 .social__link,
-.project__button {
+.filter__button {
   transition: background-color 250ms var(--cubic);
 }
 
@@ -80,10 +80,26 @@
   transition: box-shadow 250ms var(--cubic);
 }
 
-.project__button-list:focus,
+.filter__item:focus,
 .social__link:focus,
 .modal__input:focus,
 .modal__comment-input:focus,
-.project__button:focus {
+.filter__button:focus {
   outline: none;
+}
+
+.button {
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  border: transparent;
+  background-color: var(--text-blue);
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: var(--text-white);
 }
